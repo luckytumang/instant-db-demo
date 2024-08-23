@@ -12,8 +12,8 @@ type Schema = {
 
 const db = init<Schema>({ appId: APP_ID })
 
+// Read Data
 function App() {
-  // Read Data
   const { isLoading, error, data } = db.useQuery({ todos: {} })
   if (isLoading) {
     return <div>Fetching data...</div>
